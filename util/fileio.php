@@ -1,5 +1,6 @@
 <?php
 function appendToFile($data, $file){
+	echo "writing to file $file";
 	$writeFlag = "w";
 	if(file_exists($file)){
 			$writeFlag = "a";
