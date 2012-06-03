@@ -1,0 +1,4 @@
+url, day, date, loadtime, bytes, httprequests
+http://tom-barker.com, Mon, 28 May 2012 14:28:41 +0000, 3325, 255357, 42
+http://tom-barker.com, Mon, 28 May 2012 20:29:26 +0000, 4607, 255369, 42
+http://tom-barker.com, Tue, 29 May 2012 12:29:29 +0000, 6469, 252505, 42

@@ -1,7 +1,7 @@
-dataDirectory <- "/Users/tbarke000/WPT/data/"
-chartDirectory <- "/Users/tbarke000/WPT/charts/"
+dataDirectory <- "/Users/tbarke000/WPTRunner/data/"
+chartDirectory <- "/Users/tbarke000/WPTRunner/charts/"
 
-wpologs <- read.table(paste(dataDirectory, "wpo_log.csv", sep=""), header=TRUE, sep=",")
+wpologs <- read.table(paste(dataDirectory, "wpo_log.txt", sep=""), header=TRUE, sep=",")
 wpochart <- paste(chartDirectory, "WPO_timeseries.pdf", sep="")
 
 
