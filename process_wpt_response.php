@@ -5,6 +5,7 @@ require("util/fileio.php");
 
 
 function readCSVurls($csvFiles, $file){
+	unlink($file);
 	print $csvFiles . "\n";
 	if (file_exists($csvFiles) && is_readable ($csvFiles)) {
 		$fh = fopen($csvFiles, "r") or die("\n can't open file $csvFiles");
@@ -13,7 +14,7 @@ function readCSVurls($csvFiles, $file){
 			$tailEntry = file_get_contents(trim($line));
 			if($tailEntry){
 				$xml = new SimpleXMLElement($tailEntry);
-				if($xml->data->statusText != "Ok"){
+				if($xml->statusCode == 200){
 					$url = $xml->data->run->firstView->results->URL;
 					$date = $xml->data->completed;
 					$loadtime = $xml->data->run->firstView->results->loadTime;
